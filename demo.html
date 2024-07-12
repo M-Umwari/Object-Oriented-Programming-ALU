@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University Residence Management</title>
+    <script src="residence.js" defer></script>
+  </head>
+  <body>
+    <h1>University Residence Management System</h1>
+    <button onclick="demo()">Run Demo</button>
+    <pre id="output"></pre>
+
+    <script>
+      // Example usage of the classes
+      function demo() {
+        const university = new University('Example University');
+        const residence = new Residence('Residence Hall 1');
+        const student = new Student('John Doe', '12345');
+        const request = new MaintenanceRequest('Leaky faucet', student);
+
+        university.addResidence(residence);
+        residence.addStudent(student);
+        residence.submitMaintenanceRequest(request);
+
+        document.getElementById('output').textContent = JSON.stringify(
+          university,
+          null,
+          2
+        );
+      }
+    </script>
+  </body>
+</html>
