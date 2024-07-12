@@ -59,7 +59,7 @@ class MaintenanceRequest {
 }
 
 // Example usage
-const university = new University('Example University');
+const university = new University('ALU University');
 const residence = new Residence('Residence Hall 1');
 const student = new Student('John Doe', '12345');
 const request = new MaintenanceRequest('Leaky faucet', student);
